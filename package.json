@@ -13,6 +13,8 @@
     "jade": "~1.11.0",
     "morgan": "~1.6.1",
     "mongoose": "~4.4.19",
+    "chai": "~3.5.0",
+    "mocha-mongoose": "~",
     "serve-favicon": "~2.3.0"
   }
 }

@@ -8,13 +8,29 @@ var mongoose = require('mongoose');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
+var webhook = require('./routes/webhook');
 
 var config = require('./models/config');
-var User = require('./models/facebook');
+var Application = require('./models/facebook');
+
 
 // Databases
+mongoose.connect(config.database + config.dbName);
 
-mongoose.connect(config.database);
+var Messenger = new Application({
+  name: 'messenger',
+  token: 'testbot_verify_token_F0bdxnfSFcNFQ7HWYviq'
+});
+
+Messenger.save(function(err) {
+  if(err) {
+    console.log('Error saving new application to mongo db: ' + err.toString());
+    throw err;
+  }
+  console.log('Application: ' + ' saved successfully');
+});
+
+
 
 var app = express();
 

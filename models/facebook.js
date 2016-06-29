@@ -6,7 +6,7 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-module.exports = mongoose.model('Messenger', new Schema({
+module.exports = mongoose.model('Application', new Schema({
     name: String,
-    password: String
+    token: String
 }));
