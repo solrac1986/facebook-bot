@@ -80,9 +80,9 @@ describe("Database Modulus MongoDB", function() {
     });
 });
 
-//describe('GET /webhook', function(){
-//   it('check if webhook token id', function(done){
+describe('GET /webhook', function(){
+   it('check if webhook token id', function(done){
        // routes.webhook()
-//   });
-//});
+   });
+});
 
