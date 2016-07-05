@@ -17,19 +17,6 @@ var Application = require('./models/facebook');
 // Databases
 mongoose.connect(config.database + config.dbName);
 
-var Messenger = new Application({
-  name: 'messenger',
-  token: 'testbot_verify_token_F0bdxnfSFcNFQ7HWYviq'
-});
-
-Messenger.save(function(err) {
-  if(err) {
-    console.log('Error saving new application to mongo db: ' + err.toString());
-    throw err;
-  }
-  console.log('Application: ' + ' saved successfully');
-});
-
 
 
 var app = express();
